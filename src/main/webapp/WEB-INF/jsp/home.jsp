@@ -15,7 +15,7 @@
 <h3>할 일</h3>
 <h4>
     <form action="/add" method="post">
-        <input type="text" name="" placeholder="할 일을 입력하세요">
+        <input type="text" name="todo" placeholder="할 일을 입력하세요">
         <button>전송</button>
     </form>
 </h4>
@@ -29,7 +29,11 @@
             <th>입력일시</th>
         </tr>
         <c:forEach items="${todoList}" var="todo">
-
+            <tr>
+                <td>${todo.id}</td>
+                <td>${todo.todo}</td>
+                <td>${todo.inserted}</td>
+            </tr>
         </c:forEach>
     </table>
 </div>
